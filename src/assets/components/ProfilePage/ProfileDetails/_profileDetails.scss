@@ -1,0 +1,70 @@
+@import "../../../styles/defaultmixin";
+
+.profile {
+    display: flex;
+    padding-top: 40px;
+
+    &__pic {
+        img {
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            padding: 40px;
+        }
+    }
+
+    &__details {
+        padding-left: 50px;
+
+        .usernameBtns {
+            @include flexAlignCenter;
+            gap: 10px;
+            padding: 10px 0px 10px;
+
+            .username {
+                @include fontS20B400;
+                cursor: pointer;
+                padding-right: 20px;
+            }
+
+            .more-dots {
+                cursor: pointer;
+            }
+
+            .add-people {
+                min-width: 10px;
+                margin-right: 5px;
+            }
+            .loading-icon {
+                margin-left: 13px;
+            }
+            
+        }
+
+        .post-follow-following {
+            @include flexAlignCenter;
+            gap: 35px;
+            padding: 10px 0px 10px;
+
+            .txt {
+                font-size: 16px;
+
+                .no {
+                    @include fontS16B700;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .name {
+            @include fontS14B700;
+            padding: 10px 0px;
+        }
+
+        .description {
+            padding: 10px 0px;
+            @include fontS14B400;
+            line-height: 20px;
+        }
+    }
+}

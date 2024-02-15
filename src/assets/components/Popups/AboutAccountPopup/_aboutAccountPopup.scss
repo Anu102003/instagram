@@ -1,0 +1,118 @@
+@import "../../../styles/defaultmixin";
+
+.about-popup {
+
+    &__title {
+        @include displayFlex;
+        @include fontS14B700;
+        height: 45px;
+        width: 100%;
+        @include borderMediumBrown;
+        position: relative;
+    }
+
+    &__profile {
+        @include displayFlex;
+
+        .about-popup-img {
+            @include displayFlex;
+            padding: 20px 0px;
+
+            >img {
+                border-radius: 50%;
+            }
+        }
+
+        .about-popup-username {
+            @include displayFlex;
+            @include fontS16B700;
+        }
+
+        .about-popup-text {
+            @include displayFlex;
+            text-align: center;
+            @include fontGrayS12;
+            width: 300px;
+            line-height: 15px;
+
+            .about-popup-link {
+                @include linkText;
+            }
+        }
+    }
+
+    &__content {
+        padding: 30px 20px 20px;
+
+        .about-content-list {
+            @include flexAlignCenter;
+            padding: 15px 0px;
+
+            .content-items {
+                padding-left: 15px;
+
+                &__text {
+                    font-size: 16px;
+                    padding-bottom: 2px;
+                }
+
+                &__subtext {
+                    @include fontGrayS14;
+                }
+
+            }
+        }
+
+        .about-content-text {
+            @include fontGrayS12;
+            line-height: 18px;
+            padding-bottom: 20px;
+        }
+
+        .about-content-link {
+            @extend.about-popup-link ;
+            @include linkText;
+        }
+    }
+
+    &__btn {
+        @include hover-btn(rgb(0, 149, 246), null);
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    &__btn-hover {
+        @include hover-btn(black, null);
+        height: 30px;
+        border-radius: 5px;
+        @include borderMediumBrown;
+    }
+
+}
+
+.shared {
+    @include flexJustifySpaceBetwen;
+    padding: 10px 0px;
+    cursor: pointer;
+
+    .shared-icon-txt {
+        @include displayFlex;
+
+        .shared-icon {
+            padding-right: 15px;
+        }
+    }
+
+    .shared-right-arrow {
+        @include grayColor;
+    }
+}
+
+.shared-account {
+    position: relative;
+
+    .right-arrow {
+        @include right-arrow;
+    }
+
+}

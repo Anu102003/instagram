@@ -1,0 +1,60 @@
+@import "../../../styles/defaultmixin";
+
+.popup-switch-parent {
+    @include popup-parent;
+}
+
+.popup-switch {
+    @include popup-more(400px);
+}
+
+.close-container {
+    display: flex;
+    justify-content: end;
+    font-size: 25px;
+    padding: 25px;
+    position: relative;
+}
+
+.close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+}
+
+.unfollow {
+    &__profile {
+        padding: 32px;
+        text-align: center;
+        @include borderMediumBrown;
+
+        img {
+            border-radius: 50%;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__username {
+        @include fontS14B400;
+        color: white;
+    }
+
+    &__btn {
+        text-align: center;
+        cursor: pointer;
+        @include redColor;
+        @include fontS14B700;
+        padding: 16px 0px 0px;
+        height: 38px;
+        @include borderMediumBrown;
+    }
+}
+
+.cancel-btn {
+    @include displayFlex;
+    cursor: pointer;
+    @include whiteColor;
+    font-size: 14px;
+    height: 20px;
+    padding-top: 16px;
+}

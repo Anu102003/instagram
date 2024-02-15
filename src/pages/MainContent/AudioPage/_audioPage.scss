@@ -1,0 +1,67 @@
+@import "../../../assets/styles/defaultmixin";
+
+.audio-container{
+    display: grid;
+    grid-template-columns: 0.5fr 2.5fr 0.5fr;
+    .audio-wrapper{
+        padding: 0px 1.35rem;
+        .audio-heading{
+            padding: 1rem 0;
+        }
+        .audio-profile{
+            display: flex;
+            .audio-profile-img{
+                padding: 10px 2rem 0px 0px;
+                img{
+                    border-radius: 15px;
+                }
+            }
+            .audio-profile-details{
+                .audio-title{
+                    font-weight: 400;
+                    font-size: 20px;
+                    padding: 10px 0px;
+                }
+                .audio-save-btn{
+                    padding: 5px 0px;
+                    width: 100%;
+                    @include inputField;
+                    @include hover-btn(rgb(54, 54, 54), #262626);
+                    margin: 15px 0px 5px;
+                    width: 22.5rem;
+                }
+                .audio-player{
+                    @include displayFlex;
+                    
+                    // input[type="range"] {
+                    //     -webkit-appearance: none;
+                    //     appearance: none; 
+                    //     width: 17rem;
+                    //     cursor: pointer;
+                    //     outline: none;
+                    //     border-radius: 15px;
+                    //     height: 3px;
+                    //     background: #ccc;
+                    //   }
+                      
+                    //   input[type="range"]::-webkit-slider-thumb {
+                    //     -webkit-appearance: none;
+                    //     appearance: none; 
+                    //     height: 15px;
+                    //     width: 15px;
+                    //     background-color: rgb(255, 255, 255);
+                    //     border-radius: 50%;
+                    //     border: none;
+                    //   }
+                      
+                    
+                    .audio-input-range{
+                        height: 3px;
+                        width: 17rem;
+                        margin: 0px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

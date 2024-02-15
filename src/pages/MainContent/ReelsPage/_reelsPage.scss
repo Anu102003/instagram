@@ -1,0 +1,10 @@
+
+.reels-container {
+    background-color: black;
+    color: white;
+    min-height: 100dvh;
+    min-width: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin: 1.875rem;   
+}

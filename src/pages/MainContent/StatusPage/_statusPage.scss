@@ -1,0 +1,128 @@
+@import "../../../assets/styles/defaultmixin";
+
+
+.status-wrapper {
+    @include whiteColor;
+    @include blackBackgroundColor;
+    min-height: 100vh;
+    min-width: 100dvh;
+
+    .logo-close {
+        display: flex;
+        justify-content: space-between;
+        min-width: 100%;
+
+        .status-logo {
+            padding: 35px 12px 20px 40px;
+            cursor: pointer;
+        }
+
+        .status-close-icon {
+            padding: 25px 30px 20px;
+            cursor: pointer;
+            z-index: 2;
+        }
+    }
+
+    .status-container {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        .status-card {
+            position: relative;
+
+            .status-left-icon {
+                @include arrow-btn;
+                left: -3rem;
+                top: 20rem;
+            }
+
+            .status-right-icon {
+                @include arrow-btn;
+                right: -3rem;
+                top: 20rem;
+            }
+
+        }
+    }
+
+
+}
+
+
+.popup-parentt {
+    @include popup-parent;
+    background: rgba(14, 13, 13, 0.581);
+}
+
+
+.popup-more {
+    @include popup-more(380px);
+}
+
+@media screen and (max-width:915px) {
+    .status-wrapper {
+        min-height: 110vh;
+        position: fixed;
+
+        .logo-close {
+            display: inline;
+            position: relative;
+
+            .status-close-icon {
+                position: absolute;
+                top: 0;
+                left: 47rem;
+            }
+        }
+    }
+
+    .status-container {
+        padding-top: 5rem;
+    }
+}
+
+@media screen and (max-width:825px) {
+    .status-wrapper {
+        .logo-close {
+            position: relative;
+
+            .status-close-icon {
+                position: absolute;
+                top: 0;
+                left: 40rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .status-wrapper {
+        .logo-close {
+            position: relative;
+
+            .status-close-icon {
+                position: absolute;
+                top: 0;
+                left: 34rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:605px) {
+    .status-wrapper {
+        .logo-close {
+            position: relative;
+
+            .status-close-icon {
+                position: absolute;
+                top: 0;
+                left: 28rem;
+            }
+        }
+    }
+}

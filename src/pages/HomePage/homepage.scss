@@ -1,0 +1,202 @@
+@import "../../assets/styles/_defaultmixin.scss";
+
+.container {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  min-height: 100dvh;
+  min-width: 100dvh;
+  overflow: hidden;
+}
+
+.search-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.notifications-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.notification-parent {
+  @include popup-parent;
+}
+
+.short-sidebar {
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 10px 15px 30px;
+  z-index: 6;
+  border-right: 1px solid #262626;
+}
+
+.sidebar {
+  width: 17%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: fixed;
+  padding: 10px 20px 30px;
+  border-right: 1px solid #262626;
+}
+
+
+
+.main-content {
+  flex: content;
+  box-sizing: border-box;
+  margin-left: 10%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.popup-switch-parent {
+  @include popup-parent;
+}
+
+.popup-switch {
+  @include popup-more(400px);
+}
+
+.popup-discard-parent {
+  @include popup-parent;
+  background: rgba(8, 8, 8, 0.729);
+
+}
+
+.popup-discard {
+  @include popup-more(400px);
+}
+
+.popup-new-chat-parent {
+  @include popup-parent;
+}
+
+.popup-new-chat {
+  @include popup-more(550px);
+}
+
+.popup-create-parent {
+  @include popup-parent;
+}
+
+.more-option-parent {
+  @include whiteColor;
+  position: fixed;
+  top: 13rem;
+  left: 10px;
+  z-index: 40;
+  height: 100%;
+  width: 100%;
+}
+
+.popup-more-option {
+  width: 286px;
+  height: 410px;
+  @include lightBlackBackgroundColor;
+  border-radius: 20px;
+  overflow: auto;
+  margin: 20px 0px;
+  z-index: 62 !important;
+}
+
+.popup-create {
+  overflow: hidden;
+  min-width: 550px;
+  max-width: max-content;
+  max-height: max-content;
+  @include lightBlackBackgroundColor;
+  border-radius: 20px;
+  margin: 20px 0px;
+}
+
+.close-container {
+  display: flex;
+  justify-content: end;
+  font-size: 25px;
+  padding: 25px;
+  position: relative;
+}
+
+.discard-title {
+  @include fontS20B400;
+  @include displayFlex;
+  padding: 30px 0px 15px;
+}
+
+.discard-txt {
+  @include fontGrayS14B400;
+  padding-bottom: 30px;
+  @include displayFlex;
+
+}
+
+.discard-txt {
+  @include fontGrayS14B400;
+  @include displayFlex;
+  @include borderMediumBrown;
+
+}
+
+.discard-discard-txt {
+  @include redColor;
+  @include displayFlex;
+  @include borderMediumBrown;
+  @include fontS14B700;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+.discard-cancel {
+  @include displayFlex;
+  padding: 15px 0px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 1230px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+
+@media screen and (max-width: 770px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .short-sidebar {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .main-content {
+    display: inline;
+    margin-left: 6%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main-content {
+    display: inline;
+    margin-left: 2%;
+  }
+}

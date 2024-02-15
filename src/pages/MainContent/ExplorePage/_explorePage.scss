@@ -1,0 +1,27 @@
+@import "../../../assets/styles/defaultmixin";
+
+.explore-container {
+
+    width: 75%;
+    @include displayFlex;
+    padding: 30px;
+    
+    .explore {
+        @include displayFlex;
+        flex-wrap: wrap;
+        gap: 0px 4px;
+
+    }
+}
+@media only screen and (max-width: 590px) {
+    .explore-container {
+    margin-left: 5%;}
+  }
+  @media only screen and (min-width: 590px) {
+    .explore-container {
+        margin-left: 7%;}
+  }
+  @media only screen and (min-width: 710px) {
+    .explore-container {
+    margin-left: 5%;}
+  }

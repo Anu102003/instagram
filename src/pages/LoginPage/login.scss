@@ -1,0 +1,162 @@
+@import "../../assets/styles/defaultmixin";
+
+.login-grid-card{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.login-grid-content{
+    display: flex;
+    margin-top: 25px;
+}
+.login-right-container{
+     padding-bottom: 25px;
+     width:350px;
+     @include borderLight;
+     margin-top: 15px;
+     text-align: center;
+}
+.login-logo{
+    width: 175px;
+    margin-top: 30px;
+}
+.login-sign{
+    margin-top:25px;
+}
+.login-text{
+    width:268px;
+    height: 36px;
+    margin: 5px;
+    @include borderLight;
+    background-color: #FAFAFA;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+.sigin-password{
+    align-items: center;
+    position: relative;
+}
+.eye-icon{
+    position: absolute;
+    left:17rem;
+    top:15px
+}
+.login-button{
+    width: 278px;
+    height: 36px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #4CB5F9;
+    background-color: #4CB5F9;
+    @include whiteColor;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-div-or{
+   display: flex;
+   justify-content: center;
+   margin-top: 15px;
+}
+.login-dividor{
+    width: 106px;
+    height: 1px;
+    margin-top: 10px;
+    background-color: #DBDBDB;
+}
+.login-or{
+    margin: 0px;
+    color: #777373;
+   margin-right: 18px;
+   margin-left: 18px;
+   @include fontS16B400;
+}
+.login-fb{
+    margin-top: 30px;
+    color: #385185;
+    cursor: pointer;
+    @include fontS16B400;
+}
+.login-forgot{
+    font-size: 12px;
+    margin-top: 18px;
+    text-align: center;
+    color: #00376B;
+    cursor: pointer;
+}
+.fb-img{
+    position: relative;
+    top:3px;
+}
+.login-sign-option{
+   height:63px ;
+   width: 350px;
+   @include borderLight;
+   margin-top: 10px;
+   text-align: center;
+}
+.sign-text{
+     font-weight: bold; 
+     color: #0095F6;
+     cursor: pointer;
+}
+.login-sign{
+   font-size: 14px;
+}
+.login-app-text{
+    font-size: 14px;
+}
+.login-app{
+    height: 105px;
+    width: 350px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.login-app-img{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.login-left-container{
+   position: relative;
+}
+.screen{
+    position: absolute;
+    left:155px;
+    top:25px;
+    animation:fading 12s infinite
+}
+
+@keyframes fading{
+0%{
+opacity:0.75
+}
+50%{
+opacity:1
+}
+100%{
+opacity:1
+}
+}
+.signin-error{
+    @include redColor;
+    font-size: 13px;
+    padding: 8px 0px;
+    width: 300px;
+    padding-left: 20px;
+
+}
+.signin-loading{
+    padding-top: 10px;
+}
+@media screen and (max-width:960px) {
+    .login-left-container {
+        display: none;
+    }
+    .login-grid-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

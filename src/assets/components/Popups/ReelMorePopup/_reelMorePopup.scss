@@ -1,0 +1,26 @@
+@import "../../../styles/defaultmixin";
+
+@mixin reel-btn-basic{
+    @include fontS14B400;
+    padding: 17px 20px 17px 10px;
+    cursor: pointer;
+
+    &:hover{
+         background-color: #3C3C3C;
+         border-radius: 10px;
+    }
+}
+.reel-more-popup-red-btn{
+    @include reel-btn-basic;
+    color: rgb(237, 73, 86);
+    
+}
+.follow{
+    @include bluePrimaryColor;
+}
+.unfollow{
+    color: rgb(237, 73, 86);
+}
+.reel-more-popup-btn{
+    @include reel-btn-basic;
+}

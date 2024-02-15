@@ -1,0 +1,39 @@
+@import "../../../../assets/styles/defaultmixin";
+
+.notification {
+    padding: 3rem 8rem;
+
+    .title {
+        @include fontS20B600;
+    }
+    .select-notificaton{
+        @include lightBorderWithRadius;
+        margin-top: 1.875rem;
+        padding: 10px;
+        .options{
+            @include flexJustifySpaceBetwen;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+    .txt-toggle{
+        @include flexJustifySpaceBetwen;
+        font-size: 16px;
+    }
+    .sub-title{
+        @include fontS16B700;
+        padding: 30px 0px 20px;
+    }
+    .radio-option{
+        display: flex;
+        gap:10px;
+        padding: 10px 0px;
+        cursor: pointer;
+    }
+    .hr{
+        height: 1px;
+        margin: 10px 0px;
+        width: 100%;
+        background-color: rgb(47, 46, 46);;
+    }
+}

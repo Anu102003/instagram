@@ -1,0 +1,29 @@
+@import "../../../../assets/styles/defaultmixin";
+
+.hideStoryLive {
+    padding: 3rem 8rem;
+
+    .title {
+        @include fontS20B600;
+    }
+    .select-hideStoryLive{
+        @include lightBorderWithRadius;
+        margin-top: 1.875rem;
+        padding: 10px;
+        .options{
+            @include flexJustifySpaceBetwen;
+            padding: 10px;
+            cursor: pointer;
+        }
+    }
+     .sub-txt{
+        padding: 20px 0px;
+        @include fontGrayS14B400;
+    }
+    .search-input {
+        @include search-input;
+    }
+    .profile-details {
+        @include profile-details; 
+    }
+}

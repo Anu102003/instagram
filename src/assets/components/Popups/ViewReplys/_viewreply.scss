@@ -1,0 +1,13 @@
+@import "../../../styles/defaultmixin";
+
+.view-comment {
+    display: flex;
+}
+
+.view-comment-container {
+    width: 100%;
+    @include flexJustifySpaceBetwen;
+    position: relative;
+    padding: 10px 0px;
+}
+

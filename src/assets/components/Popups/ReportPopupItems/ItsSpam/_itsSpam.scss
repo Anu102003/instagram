@@ -1,0 +1,93 @@
+@import "../../../../styles/defaultmixin";
+
+// Its Spam
+.its-spam {
+    padding: 0px 16px;
+    margin: 16px 0px 0px;
+
+    .its-spam-head {
+        text-align: center;
+        margin-bottom: 40px;
+
+        .its-spam-tickIcon {
+            margin: 24px 0px 24px;
+            padding-top: 16px;
+        }
+
+        .its-spam-txt {
+            @include fontS16B700;
+            padding-bottom: 10px;
+        }
+
+        .its-spam-subtxt {
+            @include fontGrayS14B400;
+            padding-bottom: 10px;
+        }
+    }
+
+    .report-content-items {
+        @include report-content-items;
+        padding: 17px 0px;
+
+        .report-content-text {
+            @include report-content-text;
+        }
+
+        .block-text {
+            @include redColor;
+        }
+
+        .report-arrow-load-icon {
+            @include report-arrow-load-icon;
+        }
+    }
+
+    .report-link {
+        text-decoration: none;
+        @include whiteColor;
+    }
+
+    .close-btn {
+        @include hover-btn(rgb(0, 149, 246), null);
+        height: 20px;
+        border-radius: 5px;
+        margin: 20px 0px;
+    }
+}
+
+
+
+
+//blockPopup
+
+.block-popup {
+    text-align: center;
+
+    .block-popup-head {
+        padding: 24px 24px 5px;
+
+        .block-txt {
+            font-weight: 400;
+            font-size: 20px;
+            padding-bottom: 15px;
+        }
+
+        .block-subtxt {
+            @include fontGrayS14B400;
+            padding-bottom: 10px;
+        }
+    }
+
+    .block-btn {
+        @include borderMediumBrownTop;
+        @include displayFlex;
+        height: 48px;
+
+    }
+
+    .dismiss-btn {
+        margin-top: 10px;
+        @include borderMediumBrownTop;
+        height: 48px;
+    }
+}

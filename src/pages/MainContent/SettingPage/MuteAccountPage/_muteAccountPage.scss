@@ -1,0 +1,41 @@
+@import "../../../../assets/styles/defaultmixin";
+
+
+.muted-account {
+    padding: 3rem 8rem ;
+    
+    .title {
+        @include fontS20B600;
+        padding-bottom: 10px;
+    }
+
+    .profile-details {
+        @include flexJustifySpaceBetwen;
+        padding: 15px 0px 10px;
+        .img-name {
+            display: flex;
+            gap: 10px;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .username-name {
+
+                .username {
+                    @include fontS14B700;
+                    padding-bottom: 3px;
+                }
+
+                .description {
+                    @include fontGrayS14B400;
+                }
+            }
+        }
+    }
+    .subtxt{
+        @include fontGrayS14B400;
+        @include displayFlex;
+        padding-top: 10rem;
+    }
+}

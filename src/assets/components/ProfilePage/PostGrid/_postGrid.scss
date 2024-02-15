@@ -1,0 +1,74 @@
+@import "../../../styles/defaultmixin";
+
+@mixin post-hover($ht,$wt) {
+    height: $ht;
+    width: $wt;
+    background-color: rgba(0, 0, 0, 0.266);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+    @include displayFlex;
+    gap: 30px;
+
+    .post-hover-content {
+        @include fontS16B700;
+
+        .post-hover-text {
+            padding-left: .625rem;
+        }
+    }
+}
+@mixin icon{
+        position: absolute;
+        right: .625rem;
+        top: .625rem;
+}
+.post-grid-container {
+    padding: 1.25rem 0px 1.875rem;
+
+    .post-wrapper {
+        display: flex;
+        flex-wrap: wrap;        
+    }
+}
+.post-border{
+    border-right: 4px solid black;
+    border-bottom: 1px solid black;
+}
+.posts {
+    position: relative;
+    height: 100%;
+    video {
+        object-fit: cover;
+    }
+    img {
+        object-fit:fill;
+    }
+
+    .image-icon {
+        @include icon;
+    }
+    .video-icon {
+        @include icon;
+    }
+    .reel-icon {
+        position: absolute;
+        left: 1.25rem;
+        bottom: 1.25rem;
+        @include displayFlex;
+        gap:0.6rem;
+        .views{
+            @include fontS16B700;
+        }
+    }
+    .post-hover-img {
+        @include post-hover(18.4375rem,18.5rem);
+    }
+    .post-hover-video {
+        @include post-hover(22.5rem,13.8125rem);
+    }
+    .post-hover-explore {
+        @include post-hover(316px,316px);
+    }
+}

@@ -1,0 +1,105 @@
+@import "../../../../assets/styles/defaultmixin";
+
+
+
+.left-icon {
+    @include arrow-btn;
+    left: 1px;
+    top: 24px;
+}
+
+.right-icon {
+    @include arrow-btn;
+    right: 1px;
+    top: 24px;
+}
+
+
+.carousel-body {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    overflow-y: none;
+    scroll-behavior: smooth;
+}
+
+.carousel-body::-webkit-scrollbar {
+    display: none;
+}
+
+.avatar-detail {
+    cursor: pointer;
+    text-align: center;
+
+    .status-card {
+        display: flex;
+        width: 630px;
+        padding: 8px 0px;
+
+
+        &__img {
+            @include statusImgBackground;
+            height: 65px;
+            width: 65px; 
+            margin: 5px 5px 1px; 
+        }
+
+        &__username {
+
+            p{
+                @include fontS12B400;
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+    }
+
+    .story-gif {
+        padding-top: 5px;
+        padding-left: 5px;
+        img {
+            width: 62px;
+            height: 62px;
+        }
+    }
+
+    .story-img {
+        position: relative;
+        bottom: 34px;
+
+        .status-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 3px solid black;
+            @include displayFlex;
+        }
+    }
+
+}
+
+.status-img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 3px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.check {
+    position: relative;
+}
+@media screen and (max-width: 640px) {
+    .carousel-body {
+        width: 500px;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    .carousel-body {
+        width: 460px;
+    }
+  }

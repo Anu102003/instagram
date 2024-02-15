@@ -1,0 +1,215 @@
+@import "../../../../assets/styles/defaultmixin";
+
+@mixin sub-txt {
+    padding-top: 10px;
+    @include fontGrayS12B400;
+}
+
+@mixin title {
+    @include fontS16B700;
+    padding-bottom: 15px;
+}
+
+.edit-profile {
+    padding: 3rem 8rem;
+
+    .title {
+        @include fontS20B600;
+    }
+
+    .profile-details {
+        margin: 2rem 0px;
+        padding: 20px;
+        border-radius: 20px;
+        @include flexJustifySpaceBetwen;
+        background-color: #262626;
+
+        .img-name {
+            display: flex;
+            gap: 10px;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .profile-name {
+                padding-top: 10px;
+
+                .username {
+                    @include fontS16B700;
+                    padding-bottom: 3px;
+                }
+
+                .name {
+                    @include fontGrayS14B400;
+                }
+            }
+        }
+    }
+
+    .website {
+        .web-title {
+            @include title;
+        }
+
+        .web-container {
+            background-color: #262626;
+            @include grayColor;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+
+        .web-sub-txt {
+            @include sub-txt;
+        }
+    }
+
+    .bio {
+        padding-top: 30px;
+
+        .bio-title {
+            @include title;
+        }
+
+        .bio-border {
+            border: 1px solid white !important;
+        }
+
+        .bio-container {
+            background-color: transparent;
+            border: 1px solid #262626;
+            @include grayColor;
+            font-size: 16px;
+            padding: 10px 10px;
+            height: 45px;
+            width: 623px;
+            border-radius: 10px;
+            position: relative;
+
+            .input {
+                padding-right: 90px;
+                background-color: transparent;
+                @include inputField;
+                height: 100%;
+                width: 100%;
+                color: white;
+                width: 568px;
+            }
+
+            .words {
+                position: absolute;
+                right: 10px;
+                bottom: 5px;
+                @include fontGrayS14B400;
+            }
+        }
+
+    }
+
+    .gender {
+        padding-top: 30px;
+        position: relative;
+
+        .gender-title {
+            @include title;
+        }
+
+        .gender-dropdown {
+            background-color: transparent;
+            border: 1px solid #262626;
+            padding: 20px 10px;
+            border-radius: 10px;
+            @include flexJustifySpaceBetwen;
+            cursor: pointer;
+
+            .down-icon {
+                @include grayColor;
+            }
+        }
+
+        .gender-options-custom {
+            padding-bottom: 10px;
+
+            &:hover {
+                background-color: #3C3C3C;
+            }
+        }
+
+        .gender-options-container {
+            position: absolute;
+            bottom: 5.5rem;
+            right: 10px;
+            background-color: #262626;
+            width: 450px;
+            border-radius: 15px;
+            padding: 10px 0px ;
+
+            .custom-input {
+                background-color: #121212;
+                @include inputField;
+                color: white;
+                width: 340px;
+                padding: 20px;
+                margin-left: 30px;
+                border-radius: 10px;
+            }
+
+            .gender-options {
+                @include flexJustifySpaceBetwen;
+                font-size: 16px;
+                padding: 20px;
+
+                &:hover {
+                    background-color: #3C3C3C;
+                }
+            }
+           
+        }
+
+        .gender-sub-txt {
+            @include sub-txt();
+        }
+    }
+    .show-account-suggest{
+        padding-top: 30px;
+
+        .show-account-suggest-title {
+            @include title;
+        }
+        .show-account-suggest-container{
+            background-color: transparent;
+            border: 1px solid #262626;
+            padding: 20px;
+            @include flexJustifySpaceBetwen;
+            border-radius: 15px;
+            gap:10px;
+            .show-account-suggest-txt{
+                .head{
+                    @include fontS16B400;
+                    padding-bottom: 3px;
+                }
+                .txt{
+                    @include fontGrayS12B400;
+                }
+            }
+            .toggle{
+                font-size: 40px;
+            }
+        }
+    }
+    .submit-btn{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding-top: 30px;
+        .follow-btn{
+            height: 45px;
+            width: 200px;
+        }
+    }
+}
+.red-border{
+    border: 1px solid red !important;
+}

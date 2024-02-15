@@ -1,0 +1,108 @@
+@import "../../../assets/styles/defaultmixin";
+
+.setting-page {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 5fr 0fr;
+    display: flex;
+    width: 100%;
+
+    .setting-sidebar {
+        width: 19.6875rem;
+        height: 100%;
+        position: fixed;
+        overflow-y: scroll;
+        padding: 1.25rem .725rem ;
+        left:15rem;
+
+        .title {
+            @include fontS20B600;
+            padding: 20px 40px;
+        }
+
+        .account-center-container {
+            background-color: #262626;
+            border-radius: 15px;
+            margin: 0.25rem 1.25rem;
+            padding: 1.65rem;
+
+            &:hover {
+                background-color: #3C3C3C;
+                cursor: pointer;
+            }
+
+            .meta-head {
+                padding-bottom: 10px;
+
+                .meta {
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-left: 3px;
+                }
+            }
+
+            .account-center-txt {
+                @include fontS16B700;
+                padding-bottom: 10px;
+            }
+
+            .sub-txt {
+                @include fontGrayS12B400;
+                padding-bottom: 10px;
+            }
+
+            .icon-details {
+                display: flex;
+                @include fontGrayS12B400;
+                gap: 10px;
+                padding: 10px 10px 10px 0px;
+            }
+
+            .see-more {
+                @include bluePrimaryColor;
+                @include fontS12B600;
+                padding: 7px 0px 0px;
+            }
+        }
+
+        .setting-menu-heading {
+            font-size: 14px;
+            color: rgb(168, 168, 168);
+            font-weight: 700;
+            padding: 7px;
+            margin: 5px 25px;
+        }
+
+        .selected {
+            background-color: #262626;
+            &:hover {
+                background-color: #3C3C3C !important;
+                cursor: pointer;
+            }
+        }
+
+        .setting-menu-content {
+            font-size: 15px;
+            padding: 14px;
+            border-radius: 10px;
+            margin: 5px 30px;
+            @include flexAlignCenter;
+            gap: 10px;
+
+            &:hover {
+                background-color: #262626c3;
+                cursor: pointer;
+            }
+        }
+        .empty{
+            height: 30px;
+        }
+    }
+
+    .setting-content {
+        height: 100%;
+        width: 61%;
+        position: fixed;
+        left:36rem;
+        overflow-y: scroll;
+    }
+}

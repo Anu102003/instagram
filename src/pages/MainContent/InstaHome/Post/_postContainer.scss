@@ -1,0 +1,10 @@
+@import "../../../../assets/styles/defaultmixin";
+.post-popup-parent {
+    @include popup-parent;
+}
+
+
+.popup-more{
+    @include popup-more(400px);
+    z-index: 10;
+}

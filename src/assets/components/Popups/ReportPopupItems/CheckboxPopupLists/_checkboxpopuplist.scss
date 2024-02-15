@@ -1,0 +1,59 @@
+@import "../../../../styles/_defaultmixin.scss";
+
+.report-popup-list {
+    .popup-checkbox-list {
+        border: 1px solid white;
+        padding: 10px;
+        margin: 20px 0px;
+
+        .popup-checkbox-items {
+            @include flexAlignCenter;
+            padding: 10px;
+            cursor: pointer;
+            margin: 10px 0px;
+
+            .popup-checkbox-outcircle {
+               @include popup-checkbox-outcircle;
+            }
+
+            .popup-checkbox-text {
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .title {
+        @include fontS16B700;
+        padding: 0px 15px 5px;
+    }
+
+    .we-remove-txt {
+        @include fontS14B700;
+        padding: 10px 15px 0px;
+        @include grayColor;
+    }
+
+    .notes {
+        @include grayColor;
+        @include fontS14B400;
+        padding: 5px 20px 5px 25px;
+        line-height: 16px;
+
+        .points {
+            padding-bottom: 3px;
+        }
+    }
+
+}
+
+.submit-report-select {
+    @include hover-btn(rgb(0, 149, 246), rgb(24, 119, 242));
+    height: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+.submit-report{
+    @extend .submit-report-select;
+    opacity: 0.5;
+}

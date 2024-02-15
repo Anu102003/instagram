@@ -1,0 +1,101 @@
+@import "../../styles/defaultmixin";
+
+
+// Post scss :-
+.react-input-emoji--input {
+    @include inputField;
+    @include blackBackgroundColor;
+    @include whiteColor;
+    height: 1px;
+}
+
+@mixin comment-post-blue {
+    z-index: 2;
+    @include bluePrimaryColor;
+    @include fontS14B700;
+    cursor: pointer;
+
+    &:hover {
+        @include whiteColor;
+    }
+}
+
+.post-card {
+    width: 470px;
+    padding: 10px 0px 70px;
+    @include borderBlack;
+    position: relative;
+
+    
+
+    .post-img-vid {
+        padding: 10px 0px;
+        position: relative;
+        .playPauseIcon {
+            position: absolute;
+            top: 7rem;
+            right: 13rem;
+    
+        }
+    
+        .volumeIcon {
+            position: absolute;
+            top: 14.5rem;
+            right: 1.5rem;
+        }
+        video{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .post-likes {
+        @include fontS14B700;
+        padding-bottom: 10px;
+
+    }
+
+    .post-description {
+        position: relative;
+
+        &__username {
+            @include fontS14B700;
+            padding-bottom: 1px;
+            padding-right: 2px;
+            color: rgb(222, 221, 221)
+        }
+
+        &__text {
+            @include fontS14B400;
+            @include whiteColor;
+        }
+    }
+
+    .post-more {
+        @include fontGrayS14B400;
+    }
+
+    .post-translation {
+        @include fontS12B600;
+        padding: 10px 0px 5px;
+    }
+
+    .post-view {
+        @include fontGrayS14B400;
+        padding: 5px 0px;
+        cursor: pointer;
+    }
+
+    .post-add-comment {
+        @include fontGrayS14B400;
+        @include flexJustifySpaceBetwen;
+        width: 500px;
+        position: absolute;
+        left: -22px;
+
+        .comment-post-blue {
+            @include comment-post-blue;
+        }
+    }
+}

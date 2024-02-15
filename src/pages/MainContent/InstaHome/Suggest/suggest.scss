@@ -1,0 +1,70 @@
+@import "../../../../assets/styles/defaultmixin";
+
+.home-container {
+    @include displayFlex;
+}
+.home-wrapper {
+    padding: 15px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.suggest-head {
+    padding: 40px 0px 20px;
+    text-align: center;
+    width: 63%;
+}
+
+.suggest-list {
+    display: flex;
+    padding: 0px 10px 15px;
+}
+
+.suggest-username {
+    @include fontS14B700;
+    padding-bottom: 1px;
+    @include flexAlignCenter;
+    cursor: pointer;
+}
+
+.suggest-name {
+    @include fontGrayS14B400;
+    padding-bottom: 1px;
+}
+
+.suggest-status {
+    @include fontGrayS12B400;
+    padding-bottom: 1px;
+}
+
+.suggest-img {
+    height: 54px;
+    width: 54px;
+    @include displayFlex;
+    cursor: pointer;
+}
+
+.suggest-img img {
+    border-radius: 50%;
+    height: 44px;
+    width: 44px;
+
+}
+
+.suggest-text {
+    padding-top: 10px;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.suggest-btn {
+    width: 100px;
+    @include displayFlex;
+}
+
+.follow-btn{
+    @include hover-btn(rgb(0, 149, 246), rgb(24, 119, 242));
+}
+.following-btn{
+    @include hover-btn(rgb(54, 54, 54), #262626);
+}

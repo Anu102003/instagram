@@ -1,0 +1,14 @@
+@import "../../assets/styles/defaultmixin";
+
+.pagenotfound{
+ &__title{
+    @include fontS24B600;
+    padding-top: 50px;
+    text-align: center;
+ }
+ &__txt{
+    @include fontS16B400;
+    padding-top: 40px;
+    text-align: center;
+ }
+}

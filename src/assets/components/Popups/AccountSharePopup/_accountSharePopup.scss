@@ -1,0 +1,37 @@
+@import "../../../styles/_defaultmixin.scss";
+
+.account-share {
+    padding: 20px 20px 10px;
+    @include borderMediumBrown;
+
+
+    &__text {
+        @include fontGrayS14;
+        line-height: 18px;
+        padding-bottom: 20px;
+    }
+
+    .profile-list {
+        @include displayFlex;
+
+        &__img {
+            padding: 10px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        &__username {
+            @include whiteColor;
+            @include fontS14B700;
+            padding-bottom: 7px;
+        }
+
+        &__text {
+            @include fontGrayS14;
+            line-height: 18px;
+            padding-bottom: 20px;
+        }
+    }
+}

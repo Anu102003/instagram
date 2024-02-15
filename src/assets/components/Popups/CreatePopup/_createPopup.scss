@@ -1,0 +1,91 @@
+@import "../../../styles/defaultmixin";
+
+.Create-popup {
+    overflow-y: hidden;
+
+    .title {
+        @include fontS16B700;
+        @include displayFlex;
+        @include borderMediumBrown;
+        padding: 10px 0px;
+    }
+
+    .select-items {
+        min-height: 470px;
+
+        .icon {
+            padding-top: 7rem;
+            @include displayFlex;
+            width: 100%;
+        }
+
+        .txt {
+            @include displayFlex;
+            @include fontS20B400;
+            padding: 20px 0px 25px;
+        }
+
+        .select-btn {
+            @include displayFlex;
+            width: 100%;
+        }
+    }
+
+    .head-container {
+        position: relative;
+
+        .create-left-icon {
+            position: absolute;
+            left: 20px;
+            top: 7px;
+        }
+
+        .next-text {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            @include fontS16B700;
+            @include bluePrimaryColor;
+            cursor: pointer;
+            &::hover{
+color: white;
+            }
+        }
+    }
+
+    .post-and-txt {
+        display: flex;
+        height: 100%;
+
+        .vid-or-img {
+
+            video {
+                object-fit: fit;
+                width: 100%;
+            }
+        }
+
+        .txt-details {
+            border-left: 1px solid rgb(67, 67, 67);
+            min-width: 300px;
+            padding: 20px;
+
+            .profile-details {
+                @include flexAlignCenter;
+                padding-bottom: 20px;
+
+                .username {
+                    @include fontS14B700;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.close-icon {
+    position: relative;
+    top: 30px;
+    right: 40px;
+}

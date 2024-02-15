@@ -1,0 +1,43 @@
+@import "../../../styles/_defaultmixin.scss";
+
+
+// Report Heading
+
+.report-popup {
+    .report-title {
+        position: relative;
+        .close-icon{
+            @include close-icon;
+        }
+        .right-arrow{
+            @include right-arrow;
+        }
+    }
+    .report-content-list {
+        .report-heading {
+            padding: 16px 16px 0px;
+            @include fontS16B700;
+        }
+    }
+}
+
+
+
+
+// Report Items
+
+.report-contents {
+    padding-top: 20px;
+    .report-content-items {
+        @include report-content-items;
+
+        .report-content-text {
+            @include report-content-text;
+        }
+        .report-arrow-load-icon{
+            @include report-arrow-load-icon;
+        }
+    }
+}
+
+

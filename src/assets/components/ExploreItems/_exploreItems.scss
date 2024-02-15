@@ -1,0 +1,20 @@
+@import "../ProfilePage/PostGrid/postGrid";
+
+.explore-item {
+    position: relative;
+
+    video {
+        background-color: rgb(235, 235, 235);
+        min-height: 316px;
+    }
+
+    .image-icon {
+        position: absolute;
+        right: 10px;
+        top:10px;
+    }
+
+    .post-hover {
+        @include post-hover(316px,316px);
+    }
+}

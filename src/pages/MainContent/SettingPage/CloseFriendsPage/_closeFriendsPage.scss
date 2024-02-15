@@ -1,0 +1,28 @@
+@import "../../../../assets/styles/defaultmixin";
+
+
+
+.close-friends {
+    padding: 3rem 8rem;
+
+    .title {
+        @include fontS20B600;
+    }
+
+    .subtxt {
+        padding: 20px 0px;
+        @include fontGrayS14B400;
+
+        .how-it-works {
+            @include bluePrimaryColor;
+            @include fontS14B700;
+        }
+    }
+
+    .search-input {
+        @include search-input;
+    }
+    .profile-details {
+        @include profile-details;
+    }
+}

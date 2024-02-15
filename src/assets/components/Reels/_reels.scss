@@ -1,0 +1,108 @@
+@import "../../styles/defaultmixin";
+
+.reels-vid {
+    @include displayFlex;
+    margin-bottom: 1.5rem;
+    position: relative;
+
+    video {
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .video-pause-circle {
+        background-color: rgba(51, 49, 49, 0.736);
+        height: 5rem;
+        width: 5rem;
+        position: absolute;
+        top: 16.5rem;
+        right: 7.5rem;
+        border-radius: 50%;
+    }
+
+    .playPauseIcon {
+        position: absolute;
+        top: 18rem;
+        right: 9rem;
+        z-index: 1;
+    }
+
+    .volumeIcon {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
+
+    .reels-details {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .user-details {
+            margin: 1.25rem;
+            @include flexAlignCenter;
+            gap: 15px;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .username {
+                @include fontS14B700;
+                position: relative;
+                padding-right: 10px;
+
+                .dot {
+                    position: absolute;
+                    bottom: 0px;
+                    right: -4px;
+                    font-size: 25px;
+                    padding: 1px;
+                }
+            }
+
+            .follow {
+                background-color: transparent;
+                outline: none;
+                border: none;
+                border: 1px solid rgb(189, 189, 189);
+                padding: 5px;
+                border-radius: 5px;
+                @include fontS14B700;
+                color: white;
+            }
+        }
+        // .content-container {
+        //     overflow-y: auto; /* Enable vertical scrollbar if content overflows */
+        //   }
+          
+          .content-container.overflowed {
+            min-height: 200px;
+          }
+        .reels-description {
+            margin: 1.25rem;
+            height: 15px;
+            cursor: pointer;
+            position: relative;
+            overflow-x: hidden;
+
+            .description {
+                font-size: 14px;
+                // max-height: fit-content;
+            }
+            .more{
+                @include fontS14B400;
+                color: rgb(171, 173, 175);
+                position: absolute;
+                right: -1px;
+            }
+        }
+        .reels-audio {
+            margin: 1.25rem ;
+            cursor: pointer;
+            .audio {
+                font-size: 14px;
+            }
+        }
+    }
+}

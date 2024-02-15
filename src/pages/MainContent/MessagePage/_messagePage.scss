@@ -1,0 +1,194 @@
+@import "../../../assets/styles/defaultmixin";
+
+.initial-message-container {
+    position: fixed;
+    left: 30rem;
+    height: 100%;
+    width: 100%;
+    @include displayFlex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .initial-render {
+        width: 350px;
+
+        .contents {
+            width: 100%;
+
+            .msg-img {
+                @include displayFlex;
+
+                .msg-img-border {
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    height: 6.25rem;
+                    width: 6.25rem;
+                    @include displayFlex;
+                }
+
+                padding-bottom: 1.3rem;
+            }
+
+            .your-msg {
+                text-align: center;
+                @include fontS20B400;
+                padding-bottom: 0.7rem;
+
+            }
+
+            .sub-txt {
+                @include fontGrayS14B400;
+                padding-bottom: 1rem;
+
+            }
+
+            .send-msg {
+                @include displayFlex;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+.message-container {
+
+    box-sizing: border-box;
+    margin-left: 25%;
+    width: 100%;
+
+    .message-head-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 10px 10px;
+        @include borderMediumBrown;
+
+        .msg-head {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+            .username {
+                @include fontS16B700;
+                cursor: pointer;
+            }
+        }
+
+        .msg-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+        }
+    }
+
+    .message-scroll {
+        height: 555px;
+        overflow-y: auto;
+        padding: 10px 20px 10px;
+
+        .message-profile {
+            @include displayFlex;
+            flex-direction: column;
+            padding: 40px 10px 50px;
+
+            img {
+                border-radius: 50%;
+            }
+
+            .name {
+                @include fontS20B600;
+                padding: 20px 0px 10px;
+
+            }
+
+            .username {
+                @include fontGrayS14B400;
+                position: relative;
+                @include displayFlex;
+                margin-bottom: 20px;
+
+                .dot {
+                    font-size: 20px;
+                    margin: 1px 5px;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 61px;
+                }
+
+                .instagram-txt {
+                    padding-left: 10px;
+                }
+                .following-btn{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .message-list {
+
+            .your-msg {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 5px 0px;
+
+                img {
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    background-color: #262626;
+                    padding: 8px 15px;
+                    border-radius: 50px;
+                }
+            }
+
+            .other-msg {
+                display: flex;
+                align-items: end;
+                justify-content: end;
+                padding: 5px 0px;
+
+                .txt {
+                    background-color: #3797F0;
+                    padding: 8px 15px;
+                    border-radius: 50px;
+                }
+            }
+
+        }
+    }
+    .add-input-box{
+        border: 1px solid rgb(98, 97, 97);
+        border-radius: 25px;
+        margin: 10px 20px 10px;
+        position: relative;
+        .send-txt{
+            position: absolute;
+            right: 60px;
+            top:15px;
+            z-index:5;
+            @include fontS16B700;
+            @include bluePrimaryColor;  
+            cursor: pointer;
+        }
+        .send-icons{
+            position: absolute;
+            right: 40px;
+            top:10px;
+            z-index:5;
+            .icons{
+                padding: 0px 7px;
+                cursor: pointer;
+            }
+        }
+    }
+}

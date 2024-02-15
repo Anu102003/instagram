@@ -1,0 +1,47 @@
+@import "../../styles/defaultmixin";
+
+.setting {
+    padding: 3rem 8rem;
+
+    .title {
+        @include fontS20B600;
+    }
+    .sub-title{
+        @include fontS16B700;
+        padding: 40px 0px 30px;
+    }
+
+    .outline{
+       @include lightBorderWithRadius;
+       padding: 20px 20px 10px !important;
+    }
+    .sub-txt-toggle {
+        padding: 30px 0px 20px;
+        @include flexJustifySpaceBetwen;
+        gap:80px;
+
+        .sub-txt-head {
+            @include fontS16B400;
+        }
+        .head-txt{
+            display: flex;
+            flex-direction: column;
+row-gap: 5px;
+        }
+    }
+
+    .subtext {
+        @include fontGrayS12B400;
+        padding-bottom: 20px;
+
+        .learn-more {
+            a{
+                @include linkText;
+                padding-left: 5px;
+            }
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

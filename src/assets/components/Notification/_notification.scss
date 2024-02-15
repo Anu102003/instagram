@@ -1,0 +1,60 @@
+@import "../../styles/defaultmixin";
+
+.notification-popup {
+    height: 100%;
+    width: 381px;
+    background-color: black;
+    border-right: 1px solid #262626;
+    position: fixed;
+    left: 4.6rem;
+    overflow-y: scroll;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    padding: 20px;
+
+    .title {
+        @include fontS24B600;
+    }
+    .sub-title{
+        @include fontS16B700;
+        padding: 20px 0px;
+    }
+    .profile-details{
+        @include flexJustifySpaceBetwen;
+        padding: 15px 0px 10px;
+        cursor: pointer;
+        .img-name {
+            display: flex;
+            gap: 10px;
+    
+            img {
+                border-radius: 50%;
+            }
+    
+            .username-name {
+    
+                .username {
+                    @include fontS14B700;
+                    padding-bottom: 3px;
+                }
+    
+                .description {
+                    @include fontS14B400;
+                }
+            }
+        }
+    }
+    .system-update{
+        @include flexAlignCenter;
+        gap: 10px;
+        padding: 15px 0px 10px;
+        @include fontS14B400;
+        cursor: pointer;
+        .time{
+            @include fontGrayS14B400;
+            padding-left: 5px;
+        }
+    }
+    .empty{
+        height: 30px;
+    }
+}

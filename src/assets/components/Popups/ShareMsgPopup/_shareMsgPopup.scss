@@ -1,0 +1,213 @@
+@import "../../../styles/defaultmixin";
+
+@mixin search-input {
+    @include inputField;
+    background-color: rgb(38, 38, 38);
+    @include whiteColor;
+    font-size: 16px;
+    width: 100%;
+}
+
+@mixin user-account {
+    @include flexJustifySpaceBetwen;
+    padding: 10px 10px 5px 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(60, 58, 58);
+    }
+
+    .useraccount-lists {
+        display: flex;
+        // min-width: 330px;
+
+        .useraccount-img {
+            border-radius: 50%;
+        }
+
+        .useraccount-details {
+            padding-left: 15px;
+            padding-top: 5px;
+
+            .username {
+                font-size: 14px;
+                padding-bottom: 5px;
+            }
+
+            .name {
+                @include fontGrayS14
+            }
+        }
+    }
+
+    .popup-checkbox-outcircle {
+        @include popup-checkbox-outcircle;
+    }
+}
+
+.reels-share-popup {
+    height: 405px;
+    @include popup-more(20rem);
+    overflow: hidden;
+    position: relative;
+
+    .share-wrap {
+        // min-height: 350px;
+
+        .search-container.overflowed1 {
+            overflow-y: scroll;
+        }
+
+        .search-container {
+            padding: 10px 20px;
+            @include borderMediumBrown;
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 65px;
+
+            .search-label {
+                @include fontS18B700;
+                padding-right: 20px;
+            }
+
+            .searchResult-input {
+                max-height: 50px;
+                min-width: 180px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .search-result {
+                    background-color: rgb(224, 241, 255);
+                    color: rgb(65, 129, 197);
+                    padding: 4px 10px;
+                    border-radius: 75px 75px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    @include fontS14B700;
+
+                    .search-result-close {
+                        padding-left: 10px;
+                    }
+                }
+
+                .search-input {
+                    @include search-input;
+                }
+            }
+        }
+
+        .search-elements {
+            min-height: 150px;
+            max-height: 200px;
+            width: 20rem;
+            overflow-y: auto;
+            padding-top: 10px;
+
+            .account-not-found {
+                @include fontGrayS14;
+                padding: 20px;
+            }
+
+            .user-account {
+                @include user-account;
+            }
+        }
+    }
+
+    .share-bottom {
+        // @include borderMediumBrown;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .write-a-msg {
+            @include search-input;
+            padding: 10px 30px 0px;
+        }
+    }
+}
+
+.share-msg-popup {
+    height: 473px;
+    @include popup-more(548px);
+    position: relative;
+
+    overflow: hidden;
+    padding-bottom: 30px;
+
+    .share-wrap {
+        min-height: 350px;
+
+        .search-container.overflowed1 {
+            overflow-y: scroll;
+        }
+
+        .search-container {
+            padding: 10px 20px;
+            @include borderMediumBrown;
+            display: flex;
+            overflow-x: hidden;
+            overflow-y: auto;
+            max-height: 65px;
+
+            .search-label {
+                @include fontS18B700;
+                padding-right: 20px;
+            }
+
+            .searchResult-input {
+                max-height: 50px;
+                min-width: 450px;
+                display: flex;
+                flex-wrap: wrap;
+
+                .search-result {
+                    background-color: rgb(224, 241, 255);
+                    color: rgb(65, 129, 197);
+                    padding: 4px 10px;
+                    border-radius: 75px 75px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    @include fontS14B700;
+
+                    .search-result-close {
+                        padding-left: 10px;
+                    }
+                }
+
+                .search-input {
+                    @include search-input;
+                }
+            }
+        }
+
+        .search-elements {
+            min-height: 250px;
+            max-height: 300px;
+            overflow-y: auto;
+            padding-top: 10px;
+
+            .account-not-found {
+                @include fontGrayS14;
+                padding: 20px;
+            }
+
+            .user-account {
+                @include user-account;
+            }
+        }
+    }
+
+    .share-bottom {
+        // @include borderMediumBrown;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+
+        .write-a-msg {
+            @include search-input;
+            padding: 10px 30px 0px;
+        }
+    }
+}

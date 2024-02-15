@@ -1,0 +1,113 @@
+@import "../../../assets/styles/defaultmixin";
+
+.profile-page-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .profile-page {
+        margin-left: 60px;
+
+        .highlight {
+            @include borderMediumBrown;
+            .highlight-left-icon {
+                @include arrow-btn;
+                left: 1px;
+                top: 5.5rem;
+            }
+
+            .highlight-right-icon {
+                @include arrow-btn;
+                right: 1px;
+                top: 5.5rem;
+            }
+
+
+            .highlight-carousel-body {
+                width: 900px;
+                padding: 30px 0px;
+                display: flex;
+                flex-direction: row;
+                overflow-x: scroll;
+                overflow-y: none;
+                scroll-behavior: smooth;
+            }
+
+            .highlight-carousel-body::-webkit-scrollbar {
+                display: none;
+            }
+
+            .highlight-avatar-detail {
+                cursor: pointer;
+                margin: 15px;
+                text-align: center;
+
+                .status-card {
+                    display: flex;
+                    width: 630px;
+                    padding: 8px 0px;
+
+
+                    &__img {
+                        cursor: pointer;
+                        border: 0px solid transparent;
+                        border-radius: 50%;
+                        @include displayFlex;
+                        margin-right: 10px;
+                        position: relative;
+                        background: rgb(55, 54, 54);
+                        height: 80px;
+                        width: 80px;
+                        margin: 10px;
+                    }
+
+                    &__username {
+                        p {
+                            text-align: center;
+                            @include fontS12B400;
+                        }
+                    }
+                }
+            }
+
+            .highlight-selected-img {
+                border-radius: 50%;
+                margin-top: 12px;
+                height: 74px;
+                width: 74px;
+                margin-bottom: 10px;
+                margin-left: 10px;
+            }
+
+            .highlight-status-img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border: 3px solid black;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        .post-reels-tags{
+            @include displayFlex;
+            gap:70px;
+            position: relative;
+            .cell-bar{
+                border-top: 1px solid white;
+                .cell-txt{
+                    color: white;
+                }
+            }
+            .cells{
+                @include displayFlex;
+                padding-top: 20px;
+                gap:5px;
+                cursor: pointer;
+                .cell-txt{
+                    @include fontGrayS14B400;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@import "../../assets/styles/defaultmixin";
+
+.sidebar-logo {
+   padding: 25px 12px 20px;
+   cursor: pointer;
+}
+.short-sidebar-logo {
+   padding: 25px 9px 20px;
+   cursor: pointer;
+}
+
+.sidebar-content:hover {
+   height: 30px;
+   background-color:#1e1d1d;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.sidebar-content:hover>.content-logo img {
+   width: 25px
+}
+.sidebar-content:hover>.short-content-logo img {
+   width: 25px
+}
+.short-content-logo{
+   padding: 9px 8px;
+   cursor: pointer;
+}
+.content-logo-selected {
+   width: 23px;
+   border: 1px solid white;
+   padding: 9px 8px;
+   border-radius: 5px;
+}
+
+.sidebar-content {
+   @include flexAlignCenter;
+   margin: 4px 0px;
+   padding: 12px;
+   height: 30px;
+}
+.short-sidebar-content {
+   @include flexAlignCenter;
+   margin: 4px 0px;
+   padding: 12px 0px;
+   height: 30px;
+}
+
+.content-text :hover {
+   font-weight: 600;
+}
+
+.content-text {
+   padding-left: 20px;
+}
+
+.content-text-selected {
+   padding-left: 20px;
+   font-weight: 600;
+}
+
+.threads-div {
+   margin-top: 35px;
+}
+.sidebar-text-conatiner{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+}

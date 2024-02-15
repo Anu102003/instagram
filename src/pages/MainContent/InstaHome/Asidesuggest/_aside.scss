@@ -1,0 +1,69 @@
+@import "../../../../assets/styles/defaultmixin";
+
+.aside-text-basic {
+    position: relative;
+    cursor: pointer;
+    @include fontS12B600;
+    padding: 10px 5px 0px;
+}
+
+.see-all-text {
+    @extend .aside-text-basic;
+    width: auto;
+    &:hover{
+        @include brownHoverColor;
+    }
+}
+
+.loading-icon {
+    margin-right: 15px
+}
+
+.follow-text {
+    @extend .aside-text-basic;
+    @include bluePrimaryColor;
+}
+
+.follow-text:hover {
+    @include whiteColor;
+}
+
+.following-text {
+    @extend .aside-text-basic;
+    @include whiteColor;
+}
+
+.following-text:hover {
+    @include brownHoverColor;
+}
+
+.aside-content {
+    width: 320px;
+    height: 548px;
+
+    &__profile {
+        @include displayFlex;
+
+        &__text {
+            @include bluePrimaryColor;
+
+            &:hover {
+                @include whiteColor;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        padding: 5px 0px;
+    }
+
+    &__suggest {
+        @include flexJustifySpaceBetwen;
+        padding: 20px 0px;
+    }
+}
+
+#aside-username {
+    @include brownHoverColor;
+}

@@ -1,0 +1,86 @@
+@import "../../../assets/styles/defaultmixin";
+
+.home-content {
+  display: flex;
+  padding: 30px 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.post-content {
+  padding-top: 20px;
+  @include displayFlex;
+}
+
+@media only screen and (max-width: 600px) {
+  .status-post-content {
+    margin-left: 20%;
+  }
+
+  .aside-content {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .status-post-content {
+    margin-left: 13%;
+  }
+
+  .aside-content {
+      display: none;
+  }
+}
+
+@media only screen and (min-width: 744px) {
+  .status-post-content {
+    margin-left: 10%;
+  }
+
+  .aside-content {
+      display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .status-post-content {
+    margin-left: 10%;
+  }
+
+  .aside-content {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 1130px) {
+  // .home-content {
+  //   gap: 1rem;
+  // }
+
+  .aside-content {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .aside-content {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .home-content {
+    gap: 2rem;
+  }
+  .aside-content {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1390px) {
+  .home-content {
+    gap: 7rem;
+  }
+  .aside-content {
+    display: block;
+  }
+}
