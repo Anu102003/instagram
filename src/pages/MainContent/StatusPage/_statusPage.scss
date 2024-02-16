@@ -63,6 +63,44 @@
     @include popup-more(380px);
 }
 
+@media screen and (max-width:400px) {
+    .status-wrapper {
+        min-height: 100vh;
+        position: fixed;
+
+        .logo-close {
+            .status-logo {
+                display: none;
+
+            }
+
+            .status-close-icon {
+                position: absolute;
+                top: 0;
+                left: 20.5rem !important;
+                padding-top: 10px;
+            }
+        }
+
+        .status-container {
+            padding-top: 0rem;
+
+            .status-card {
+                .status-left-icon {
+                    left: 0rem;
+                    top: 20rem;
+                }
+
+                .status-right-icon {
+                    left: 22rem;
+                    top: 20rem;
+                }
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width:915px) {
     .status-wrapper {
         min-height: 110vh;

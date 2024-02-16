@@ -115,7 +115,7 @@ export const AllPostIcons = ({ item, type, statusMorePopup, setIsStatusShared })
                     icon={regularPaperPlane}
                 />
                 {isShared &&
-                    <div className='popup-parent'>
+                    <div className='all-icon-popup-parent'>
                         <ShareMsgPopup shareMsgPopupClose={shareMsgPopupClose} />
                     </div>
                 }

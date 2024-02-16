@@ -147,3 +147,9 @@
         @include fontS14B400;
     }
 }
+@media screen and (max-width:400px) {
+    .status-display {
+        height: 90%;
+        width: 100%;
+    }
+}

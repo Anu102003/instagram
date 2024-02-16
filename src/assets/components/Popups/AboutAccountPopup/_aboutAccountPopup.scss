@@ -9,6 +9,9 @@
         width: 100%;
         @include borderMediumBrown;
         position: relative;
+        .close-icon{
+            @include close-icon;
+        }
     }
 
     &__profile {

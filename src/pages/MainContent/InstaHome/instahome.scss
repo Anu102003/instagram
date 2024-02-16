@@ -11,7 +11,56 @@
   padding-top: 20px;
   @include displayFlex;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
+  .home-content {
+    padding: 0;
+    display:inline;
+  }
+  .status-post-content {
+    padding: 10px 0px 10px 0px;
+    .status-conetnt{
+      .check{
+        margin-right: 30px;
+        .right-icon{
+          right: -20px;
+        }
+      }
+    }
+    .post-content{
+      display: inline;
+      min-width: 100px !important;
+      .post-card{
+        padding: 15px 5px 55px 0px;
+        width: 400px;
+
+        .post-add-comment {
+          width: 390px;
+          margin-left:25px ;
+        }
+        .post-img-vid {
+          padding: 10px 0px;
+          position: relative;
+  
+          img {
+              height: 418px;
+              width: 400px;
+          }
+  
+          .volumeIcon {
+              position: absolute;
+              top: 12.5rem;
+              right: 1.5rem;
+          }
+      }
+      }   
+    }
+  }
+
+  .aside-content {
+    display: none;
+  }
+}
+@media screen and (min-width: 410px) {
   .home-content {
     padding: 0;
     display:inline;

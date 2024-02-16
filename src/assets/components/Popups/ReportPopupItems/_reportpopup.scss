@@ -5,14 +5,26 @@
 
 .report-popup {
     .report-title {
+        @include displayFlex;
+        @include fontS14B700;
+        height: 45px;
+        width: 100%;
+        @include borderMediumBrown;
         position: relative;
-        .close-icon{
+
+        .close-icon {
             @include close-icon;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top:10px;
         }
-        .right-arrow{
+
+        .right-arrow {
             @include right-arrow;
         }
     }
+
     .report-content-list {
         .report-heading {
             padding: 16px 16px 0px;
@@ -28,16 +40,16 @@
 
 .report-contents {
     padding-top: 20px;
+
     .report-content-items {
         @include report-content-items;
 
         .report-content-text {
             @include report-content-text;
         }
-        .report-arrow-load-icon{
+
+        .report-arrow-load-icon {
             @include report-arrow-load-icon;
         }
     }
 }
-
-

@@ -74,3 +74,9 @@
     }
   }
   
+  @media screen and (max-width:400px) {
+    .slide--current {
+      opacity: 1;
+      margin: 0rem 3rem 0px 1rem;
+  }
+}

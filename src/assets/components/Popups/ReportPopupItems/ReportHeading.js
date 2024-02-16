@@ -8,12 +8,12 @@ export const ReportHeading = () => {
     const { popupType, setPopupType } = useContext(ReportPopupClose);
     return (
         <div className="report-popup">
-            <p className='about-popup__title report-title'>
+            <p className='report-title'>
                 {
                     popupType !== null &&
                     <FontAwesomeIcon onClick={() => { setPopupType(null) }} className="right-arrow" icon={faChevronLeft} size="xl" style={{ color: "#ffffff", cursor: 'pointer' }} />
                 }
-                <FontAwesomeIcon onClick={handleCancel} className="close-icon" icon={faXmark} size="xl" style={{ color: "#ffffff", cursor: 'pointer' }} />
+                <FontAwesomeIcon onClick={handleCancel} className="close-icon" icon={faXmark} size="xl" style={{ color: "#ffffff" }} />
                 Report
             </p>
             <div className='report-content-list'>

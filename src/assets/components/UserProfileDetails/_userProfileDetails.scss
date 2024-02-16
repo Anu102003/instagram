@@ -3,47 +3,53 @@
 .sound {
     @include fontS12B400;
 }
-.comment-report-popup{
+
+.comment-report-popup {
     @include popup-parent;
 }
+
 .post-head-container {
     @include flexJustifySpaceBetwen;
+
     .post-profile {
         @include flexAlignCenter;
         align-items: flex-start;
         margin: 5px 0px;
+
         &__img {
             @include statusImgBackground;
             height: 30px;
             width: 30px;
             margin-left: 10px;
-            
-     
+
+
             >img {
                 border-radius: 50%;
                 border: 3px solid black;
             }
         }
-    
+
         &__text {
             margin-right: 10px;
+
             .profile-username {
                 position: relative;
-                &__text{
+
+                &__text {
                     position: relative;
                     @include flexAlignCenter;
                     cursor: pointer;
                     @include fontS14B700;
                     padding-bottom: 1px;
                 }
-            }             
+            }
         }
-    
+
         &__time {
             @include displayFlex;
             @include fontGrayS14B400;
             margin-left: 5px;
-    
+
             .dot {
                 background-color: rgb(168, 168, 168);
                 height: 4px;
@@ -52,9 +58,10 @@
                 margin-right: 5px;
             }
         }
-    
+
     }
 }
+
 .more-dots {
     font-size: 23px;
     cursor: pointer;
@@ -62,20 +69,21 @@
 
 }
 
-.comment-txt{
+.comment-txt {
     font-size: 14px;
     font-weight: 300;
 }
 
-.comment-bottom{
-color: #A8A8A8;
-display: flex;
-align-items: center;
-padding: 10px 0px;
-max-height: 10px;
-cursor: pointer;
+.comment-bottom {
+    color: #A8A8A8;
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    max-height: 10px;
+    cursor: pointer;
 }
-.comment-view-reply{
+
+.comment-view-reply {
     cursor: pointer;
     padding: 15px 0px 10px;
     color: #A8A8A8;
@@ -83,28 +91,33 @@ cursor: pointer;
     font-weight: 600;
     display: flex;
     align-items: center;
-    .line-bar{
+
+    .line-bar {
         width: 25px;
         height: 1.5px;
         background-color: #A8A8A8;
         margin-right: 20px;
     }
 }
-.comment-time{
+
+.comment-time {
     font-size: 12px;
     font-weight: 400;
     padding-right: 15px;
 }
-.comment-likes{
+
+.comment-likes {
     font-size: 12px;
     font-weight: 600;
     padding-right: 15px;
 
 }
-.comment-reply{
-   @extend .comment-likes;
+
+.comment-reply {
+    @extend .comment-likes;
 }
-.comment-more{
+
+.comment-more {
     font-size: 16px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -112,19 +125,27 @@ cursor: pointer;
 }
 
 
-.comment-username{
+.comment-username {
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
     padding-bottom: 1px;
 }
 
-.popup-parent{
+.popup-parent {
     @include popup-parent;
 }
+
 .popup-switch {
     @include popup-more(400px);
 }
-.popup-more{
-    overflow: hidden!important;
+
+.popup-more {
+    // overflow: hidden!important;
+}
+
+@media screen and (max-width:400px) {
+    .popup-more {
+        overflow: scroll;
+    }
 }

@@ -8,7 +8,7 @@ export const ShareMsgPopup = ({ shareMsgPopupClose, reelsShare, msgNewChat }) =>
     const [searchTerm, setSearchTerm] = useState('');
     const [checkBoxSelectValue, setCheckBoxSelectValue] = useState([]);
     const [isOverflowed1, setIsOverflowed1] = useState(false);
-
+const[message,setMessage]=useState('')
     useEffect(() => {
         const container1 = document.getElementById('ScrollContainer1');
         if (container1) {
@@ -17,9 +17,7 @@ export const ShareMsgPopup = ({ shareMsgPopupClose, reelsShare, msgNewChat }) =>
     }, []);
 
 
-    const searchQuery = (e) => {
-        setSearchTerm(e.target.value);
-    }
+
     const filteredUsers = UserDetails.filter((user) =>
         `${user.username} ${user.name}`.toLowerCase().includes(
             searchTerm.toLowerCase().replace(/[^a-zA-Z0-9\s]/g, '')
@@ -37,11 +35,11 @@ export const ShareMsgPopup = ({ shareMsgPopupClose, reelsShare, msgNewChat }) =>
     };
     return (
         <div className={reelsShare ? "reels-share-popup" : "share-msg-popup"} >
-            <p className='about-popup__title '>
+            <p className='share-popup__title '>
                 <span>
                     {msgNewChat ? 'New message' : 'Share'}
                 </span>
-                <FontAwesomeIcon onClick={() => { shareMsgPopupClose() }} className="close-icon" icon={faXmark} size="xl" style={{ color: "#ffffff", cursor: 'pointer' }} />
+                <FontAwesomeIcon onClick={() => { shareMsgPopupClose() }} className="share-close-icon" icon={faXmark} size="xl" style={{ color: "#ffffff", cursor: 'pointer' }} />
             </p>
 
             <div className='share-wrap'>
@@ -56,7 +54,7 @@ export const ShareMsgPopup = ({ shareMsgPopupClose, reelsShare, msgNewChat }) =>
                             ))
                         }
                         </>
-                        <input className="search-input" onChange={searchQuery} value={searchTerm}
+                        <input className="search-input" onChange={(e)=>{setSearchTerm(e.target.value);}} value={searchTerm}
                             type='text' placeholder='Search...' />
                     </div>
 
@@ -99,10 +97,10 @@ export const ShareMsgPopup = ({ shareMsgPopupClose, reelsShare, msgNewChat }) =>
                 {
                     checkBoxSelectValue.length > 0 &&
                     <input className="write-a-msg"
-                        type='text' placeholder='Write a message...' />
+                        type='text' placeholder='Write a message...'onChange={(e)=>{setMessage(e.target.value)}} value={message}/>
                 }
 
-                <div className={
+                <div onClick={()=>{ message.length>0 && setCheckBoxSelectValue([]);setMessage('')}} className={
                     ` submit-msg ${checkBoxSelectValue.length > 0 ? 'submit-report-select' : 'submit-report'}`} >
                     {
                         checkBoxSelectValue.length > 1 ? "Send Separately" : msgNewChat?"Chat":"Send"

@@ -136,6 +136,20 @@
     overflow: hidden;
     padding-bottom: 30px;
 
+    .share-popup {
+
+        &__title {
+            @include displayFlex;
+            @include fontS14B700;
+            height: 45px;
+            width: 100%;
+            @include borderMediumBrown;
+            position: relative;
+            .share-close-icon{
+                @include close-icon;
+            }
+        }
+    }
     .share-wrap {
         min-height: 350px;
 
@@ -209,5 +223,11 @@
             @include search-input;
             padding: 10px 30px 0px;
         }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .share-msg-popup {
+        width: 395px;
     }
 }
