@@ -26,24 +26,31 @@
     @include borderBlack;
     position: relative;
 
-    
+
 
     .post-img-vid {
         padding: 10px 0px;
         position: relative;
+
+        img {
+            height: 418px;
+            width: 470px;
+        }
+
         .playPauseIcon {
             position: absolute;
             top: 7rem;
             right: 13rem;
-    
+
         }
-    
+
         .volumeIcon {
             position: absolute;
             top: 14.5rem;
             right: 1.5rem;
         }
-        video{
+
+        video {
             object-fit: cover;
             height: 100%;
             width: 100%;

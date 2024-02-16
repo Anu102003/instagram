@@ -101,7 +101,7 @@ export const Post = () => {
             {
                 item.postType ?
                     <div className='post-img-vid'>
-                        <img src={item.postImg} height="418px" width="470px" />
+                        <img src={item.postImg} />
                     </div> :
                     <div className='post-img-vid'>
                         <Video item={item} />

@@ -11,16 +11,64 @@
   padding-top: 20px;
   @include displayFlex;
 }
-
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+  .home-content {
+    padding: 0;
+    display:inline;
+  }
   .status-post-content {
-    margin-left: 20%;
+    padding: 10px 0px 10px 0px;
+    .status-conetnt{
+      .check{
+        margin-right: 30px;
+        .right-icon{
+          right: -20px;
+        }
+      }
+    }
+    .post-content{
+      display: inline;
+      min-width: 100px !important;
+      .post-card{
+        padding: 15px 5px 55px 5px;
+        width: 410px;
+
+        .post-add-comment {
+          width: 400px;
+          margin-left:25px ;
+        }
+        .post-img-vid {
+          padding: 10px 0px;
+          position: relative;
+  
+          img {
+              height: 418px;
+              width: 410px;
+          }
+  
+          .volumeIcon {
+              position: absolute;
+              top: 12.5rem;
+              right: 1.5rem;
+          }
+      }
+      }   
+    }
   }
 
   .aside-content {
     display: none;
   }
 }
+// @media only screen and (max-width: 600px) {
+//   .status-post-content {
+//     margin-left: 20%;
+//   }
+
+//   .aside-content {
+//     display: none;
+//   }
+// }
 
 @media only screen and (min-width: 500px) {
   .status-post-content {
