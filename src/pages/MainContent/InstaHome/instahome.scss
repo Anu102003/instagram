@@ -11,48 +11,54 @@
   padding-top: 20px;
   @include displayFlex;
 }
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 500px) {
   .home-content {
     padding: 0;
-    display:inline;
+    display: inline;
   }
+
   .status-post-content {
     padding: 10px 0px 10px 0px;
-    .status-conetnt{
-      .check{
+
+    .status-conetnt {
+      .check {
         margin-right: 30px;
-        .right-icon{
-          right: -20px;
+
+        .right-icon {
+          right: 0px;
         }
       }
     }
-    .post-content{
+
+    .post-content {
       display: inline;
       min-width: 100px !important;
-      .post-card{
+
+      .post-card {
         padding: 15px 5px 55px 0px;
-        width: 400px;
-
+        width: 100%;
         .post-add-comment {
-          width: 390px;
-          margin-left:25px ;
+          width: 80%;
+          margin-left: 25px;
         }
+
         .post-img-vid {
           padding: 10px 0px;
           position: relative;
-  
+
           img {
-              height: 418px;
-              width: 400px;
+            height: 418px;
+            width: 100%;
           }
-  
+
           .volumeIcon {
-              position: absolute;
-              top: 12.5rem;
-              right: 1.5rem;
+            position: absolute;
+            top: 12.5rem;
+            right: 1.5rem;
           }
+        }
       }
-      }   
     }
   }
 
@@ -60,58 +66,57 @@
     display: none;
   }
 }
-@media screen and (min-width: 410px) {
-  .home-content {
-    padding: 0;
-    display:inline;
-  }
-  .status-post-content {
-    padding: 10px 0px 10px 0px;
-    .status-conetnt{
-      .check{
-        margin-right: 30px;
-        .right-icon{
-          right: -20px;
-        }
-      }
-    }
-    .post-content{
-      display: inline;
-      min-width: 100px !important;
-      .post-card{
-        padding: 15px 5px 55px 5px;
-        width: 410px;
 
-        .post-add-comment {
-          width: 400px;
-          margin-left:25px ;
-        }
-        .post-img-vid {
-          padding: 10px 0px;
-          position: relative;
-  
-          img {
-              height: 418px;
-              width: 410px;
-          }
-  
-          .volumeIcon {
-              position: absolute;
-              top: 12.5rem;
-              right: 1.5rem;
-          }
-      }
-      }   
-    }
-  }
+// @media screen and (m-width: 410px) {
+//   .home-content {
+//     padding: 0;
+//     display: inline;
+//   }
 
-  .aside-content {
-    display: none;
-  }
-}
-// @media only screen and (max-width: 600px) {
 //   .status-post-content {
-//     margin-left: 20%;
+//     padding: 10px 0px 10px 0px;
+
+//     .status-conetnt {
+//       .check {
+//         margin-right: 30px;
+
+//         .right-icon {
+//           right: -20px;
+//         }
+//       }
+//     }
+
+//     .post-content {
+//       background: red;
+//       display: inline;
+//       min-width: 100px !important;
+
+//       .post-card {
+//         padding: 15px 5px 55px 5px;
+//         width: 100%;
+
+//         .post-add-comment {
+//           width: 400px;
+//           margin-left: 25px;
+//         }
+
+//         .post-img-vid {
+//           padding: 10px 0px;
+//           position: relative;
+
+//           img {
+//             height: 418px;
+//             width: 410px;
+//           }
+
+//           .volumeIcon {
+//             position: absolute;
+//             top: 12.5rem;
+//             right: 1.5rem;
+//           }
+//         }
+//       }
+//     }
 //   }
 
 //   .aside-content {
@@ -119,13 +124,15 @@
 //   }
 // }
 
+
 @media only screen and (min-width: 500px) {
+
   .status-post-content {
     margin-left: 13%;
   }
 
   .aside-content {
-      display: none;
+    display: none;
   }
 }
 
@@ -135,7 +142,7 @@
   }
 
   .aside-content {
-      display: none;
+    display: none;
   }
 }
 
@@ -151,32 +158,57 @@
 
 
 @media only screen and (min-width: 1130px) {
-  // .home-content {
-  //   gap: 1rem;
-  // }
+  .home-content {
+    display: flex;
+  }
 
   .aside-content {
     display: block;
   }
 }
+
 @media only screen and (min-width: 1200px) {
+  .home-content {
+    display: flex;
+    gap: 1%;
+  }
+
   .aside-content {
     display: block;
+  }
+
+  .post-content {
+    display: flex !important;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .home-content {
+    display: flex;
     gap: 2rem;
   }
+
   .aside-content {
     display: block;
+    margin-top: 20px;
+  }
+
+  .post-content {
+    display: flex !important;
   }
 }
+
 @media only screen and (min-width: 1390px) {
   .home-content {
     gap: 7rem;
+    display: flex;
+
   }
+
+  .post-content {
+    display: flex;
+  }
+
   .aside-content {
     display: block;
   }
