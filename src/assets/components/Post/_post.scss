@@ -21,10 +21,11 @@
 }
 
 .post-card {
-    width: 470px;
+    width:72%;
     padding: 10px 0px 70px;
     @include borderBlack;
     position: relative;
+    margin: 0 auto;
 
 
 
@@ -34,7 +35,7 @@
 
         img {
             height: 418px;
-            width: 470px;
+            width: 100%;
         }
 
         .playPauseIcon {
@@ -97,9 +98,9 @@
     .post-add-comment {
         @include fontGrayS14B400;
         @include flexJustifySpaceBetwen;
-        width: 500px;
+        width:100%;
         position: absolute;
-        left: -22px;
+        left: -10px;
 
         .comment-post-blue {
             @include comment-post-blue;
